@@ -1,0 +1,29 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(40, 197, 236);
+    
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  .form {
+    margin-top: 50px;
+  }
+  .country-name {
+    display: flex;
+    justify-content: center;
+  }
