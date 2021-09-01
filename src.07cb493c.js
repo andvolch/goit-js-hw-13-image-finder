@@ -28,4 +28,4 @@ var t,e=arguments[3];!function(e,n){"object"==typeof exports&&"undefined"!=typeo
 },{"./../images/demo.jpg":[["demo.090c7c6d.jpg","nKR3"],"nKR3"]}],"Focm":[function(require,module,exports) {
 "use strict";require("./js/countriesData.js"),require("./sass/main.scss");
 },{"./js/countriesData.js":"WrKR","./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-12-countries/src.5c76564f.js.map
+//# sourceMappingURL=/goit-js-hw-13-image-finder/src.07cb493c.js.map
