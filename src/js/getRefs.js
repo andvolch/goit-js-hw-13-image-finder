@@ -1,6 +1,9 @@
 export default function getRefs() {
   return {
-    cardContainer: document.querySelector('.js-card-container'),
-    searchForm: document.querySelector('.js-search-form'),
+    searchForm: document.querySelector('#search-form'),
+    btnSearch: document.querySelector('.btn-search'),
+    gallery: document.querySelector('.gallery'),
+    cardContainer: document.querySelector('.photo-card'),
+    btnLoadeMore: document.querySelector('.more')
   };
 }

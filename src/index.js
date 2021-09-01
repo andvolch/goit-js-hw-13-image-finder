@@ -1,4 +1,4 @@
-import './js/countriesData.js';
+import './js/cardsData.js';
 import './sass/main.scss';
 
 
