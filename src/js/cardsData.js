@@ -1,7 +1,6 @@
-import getPictures from './API.js'
+import { getPictures } from './API.js'
 import getRefs from './getRefs.js';
 import fotoCard from '../templates/fotoCard.hbs';
-// import countryСard from '../templates/countryСard.hbs'
 import debounce from 'lodash.debounce';
 import { alert, defaultModules } from '@pnotify/core/dist/PNotify.js';
 import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js';
@@ -19,11 +18,11 @@ const state = {
 refs.searchForm.addEventListener("submit", onSearch);
 refs.btnLoadeMore.addEventListener("click", onLoadMore);
 
+refs.btnLoadeMore.style.visibility = "hidden";
+
 async function onSearch(e) {
     e.preventDefault();
-    
-    refs.btnLoadeMore.style.visibility = "hidden";
-    
+        
     if (!e.currentTarget.elements.query.value.trim()) {
         return;
     }
@@ -43,7 +42,7 @@ async function onSearch(e) {
     }
     
     catch (error) {
-        onFetchError();
+        // onFetchError();
     }
 }
 
