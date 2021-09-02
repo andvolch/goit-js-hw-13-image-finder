@@ -11,7 +11,7 @@ defaultModules.set(PNotifyMobile, {});
 const refs = getRefs();
 
 // debounce(onSearch, 500)
-refs.searchForm.addEventListener('input', onSearch);
+refs.searchForm.addEventListener('submit', onSearch);
 
 
 function onSearch(e) {

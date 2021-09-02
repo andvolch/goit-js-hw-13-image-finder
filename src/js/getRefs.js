@@ -7,3 +7,5 @@ export default function getRefs() {
     btnLoadeMore: document.querySelector('.more')
   };
 }
+
+
