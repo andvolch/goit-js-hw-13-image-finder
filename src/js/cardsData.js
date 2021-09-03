@@ -4,6 +4,7 @@ import fotoCard from '../templates/fotoCard.hbs';
 import debounce from 'lodash.debounce';
 import { alert, defaultModules } from '@pnotify/core/dist/PNotify.js';
 import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js';
+import * as basicLightbox from 'basiclightbox';
 
 defaultModules.set(PNotifyMobile, {});
 
@@ -17,11 +18,14 @@ const state = {
 
 refs.searchForm.addEventListener("submit", onSearch);
 refs.btnLoadeMore.addEventListener("click", onLoadMore);
+refs.gallery.addEventListener("click", onOpenGallery);
+
 
 refs.btnLoadeMore.style.visibility = "hidden";
 
 async function onSearch(e) {
     e.preventDefault();
+    refs.btnLoadeMore.style.visibility = "hidden";
         
     if (!e.currentTarget.elements.query.value.trim()) {
         return;
@@ -52,6 +56,11 @@ async function onLoadMore() {
   
     const pictures = await getPictures(state.value, state.page);
     refs.gallery.insertAdjacentHTML("beforeend", fotoCard(pictures));
+
+    refs.gallery.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+    });
     
     if (state.page === 2) {
         const observer = new IntersectionObserver(onLoadMore, options);
@@ -60,8 +69,6 @@ async function onLoadMore() {
 
 }
 
-
-refs.gallery.addEventListener("click", onOpenGallery);
 
 function onOpenGallery(e) {
     e.preventDefault();
